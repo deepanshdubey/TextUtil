@@ -5,11 +5,11 @@ function myNavbar(props) {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">{props.title}</Navbar.Brand>
+        <Navbar.Brand href="#home"><img src="../TextUtil Logo.png" alt="logo" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#home">{props.title}</Nav.Link>
             <Nav.Link href="#link">About Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -7,7 +7,7 @@ import About from './components/About';
 function App() {
   return (
    <>
-   <Navbar title="Text Inspecto" />
+   <Navbar title="Text Inspecto"  />
    <TextForm/>
    <About/>
    </>

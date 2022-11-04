@@ -5,25 +5,33 @@ import { GrammarlyEditorPlugin } from '@grammarly/editor-sdk-react';
 
 
 export default function TextForm() {
-  const handleUpClick = () => {
+  const handleUpClick = (e) => {
+    e.preventDefault();
     let newText = text.toUpperCase();
     setText(newText);
   };
-  const handleLowClick = () => {
+  const handleLowClick = (e) => {
+    e.preventDefault();
     let newText = text.toLowerCase();
     setText(newText);
   };
-  const handleClearClick = () => {
+  const handleClearClick = (e) => {
+    e.preventDefault();
     let newText = ' ';
     setText(newText);
   };
-  const handleCopyClick = () => {
+  const handleCopyClick = (e) => {
+    e.preventDefault();
     navigator.clipboard.writeText(text)
   };
   const handleOnChange = (event) => {
+    event.preventDefault()
     setText(event.target.value);
+
   };
   const [text, setText] = useState("Enter Text Here");
+  // const [read, setRead] = useState("x minutes Read");
+
 
   return (
     <>
