@@ -24,30 +24,34 @@ export default function TextForm() {
     e.preventDefault();
     navigator.clipboard.writeText(text)
   };
+  const handlePasteClick = (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(text)
+  };
   const handleOnChange = (event) => {
     event.preventDefault()
     setText(event.target.value);
 
   };
-  const [text, setText] = useState("Enter Text Here");
+  const [text, setText] = useState("");
   // const [read, setRead] = useState("x minutes Read");
 
 
   return (
     <>
+
       <div className="container">
-      
-      
         <Form>
         <GrammarlyEditorPlugin clientId="client_Pr5vjUGCWsEZkQTvJNunhV">
           <textarea
             className="form-Control"
+            placeholder="Enter Text Here you bitch!"
             value={text}
             onChange={handleOnChange}
             id="mybox"
             rows="8"
           ></textarea>
-    </GrammarlyEditorPlugin>
+          </GrammarlyEditorPlugin>
           <br />
           <br />
           <Button type="submit" onClick={handleUpClick}>
@@ -64,6 +68,10 @@ export default function TextForm() {
           &nbsp;
           <Button type="submit" onClick={handleCopyClick}>
             Copy
+          </Button>
+          &nbsp;
+          <Button type="submit" onClick={handlePasteClick}>
+            Paste
           </Button>
         </Form>
       </div>

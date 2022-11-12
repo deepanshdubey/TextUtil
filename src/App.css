@@ -2,7 +2,7 @@
   text-align: center;
   margin: 1rem;
 }
-
+  
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -38,6 +38,9 @@
   }
 }
 
+.container{
+  margin-top: 2rem;
+}
 textarea {
   width: 70vw;
   border-radius: 1rem;
