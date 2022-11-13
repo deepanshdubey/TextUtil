@@ -5,32 +5,32 @@ import Collapse from "react-bootstrap/Collapse";
 export default function About() {
   const [open, setOpen] = useState(false);
 
-  let [myStyle, setStyle] = useState({
+  const [myStyle, setStyle] = useState({
     color: "black",
     backgroundColor: "white",
   });
 
   let [btnText, setBtnText] = useState("Enable Dark Mode");
 
-  let toggleStyle = () => {
+  const toggleStyle = () => {
     console.log(myStyle.color);
     if (myStyle.color === "black") 
     {
-      setStyle = {
+      setStyle ( {
         color: "white",
         backgroundColor: "black",
-      };
-      setBtnText = ("Enable Dark Mode");
+      });
+      setBtnText("Enable Light Mode");
     } 
     else 
     {
-      setStyle = {
+      setStyle ( {
         color: "black",
         backgroundColor: "white",
-      };
-      setBtnText = ("Enable Light Mode");
-    }
-  };
+      })
+      setBtnText("Enable Dark Mode");
+    };
+  }
   return (
     <>
       <div className="about-container" style={myStyle}>
