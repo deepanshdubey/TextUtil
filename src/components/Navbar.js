@@ -5,7 +5,7 @@ function myNavbar(props) {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home"><img src="../TextUtil Logo.png" alt="logo" /></Navbar.Brand>
+        <Navbar.Brand className='logo' href="#home"><img src={require("../TextUtil Logo.png")} alt="logo" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

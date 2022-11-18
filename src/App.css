@@ -38,6 +38,10 @@
   }
 }
 
+.logo > img{
+  width: 5em;
+}
+
 .container{
   margin-top: 2rem;
 }

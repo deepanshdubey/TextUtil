@@ -39,7 +39,6 @@ export default function TextForm() {
 
   return (
     <>
-
       <div className="container">
         <Form>
         <GrammarlyEditorPlugin clientId="client_Pr5vjUGCWsEZkQTvJNunhV">
@@ -73,18 +72,21 @@ export default function TextForm() {
           <Button type="submit" onClick={handlePasteClick}>
             Paste
           </Button>
+          &nbsp;
+          <Button type="submit" onClick={handlePasteClick}>
+            Remove Extra Space
+          </Button>
         </Form>
       </div>
       <div className="container">
       <br />
         <h1>Your text Summary</h1>
-        
         <p>
           {text.split(" ").length} words and {text.length} characters.
         </p>
         <p> {0.008 * text.split(" ").length} minutes read.</p>
         <h2>Preview</h2>
-        <div className="preview">{text}</div>
+        <div className="preview">{text} </div>
       </div>
     </>
   );
