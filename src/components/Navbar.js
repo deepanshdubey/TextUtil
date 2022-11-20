@@ -2,8 +2,9 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
-import PropTypes from "prop-types";
+
 function myNavbar(props) {
+ 
 
   return (
     <Navbar bg={props.mode}  expand="lg">
@@ -13,9 +14,10 @@ function myNavbar(props) {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">{props.title}</Nav.Link>
-            <Nav.Link href="#link">About Us</Nav.Link>
+          <Nav className="me-auto" >
+            <Nav.Link href="#home" >TextUtil</Nav.Link>
+            <Nav.Link href="#link" >About Us</Nav.Link>
+
             <Form>
               <Form.Check type="switch" onClick={props.toggleMode} id="custom-switch" label="Dark Mode" />
             </Form>

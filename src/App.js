@@ -6,22 +6,34 @@ import About from './components/About';
 import { useState } from 'react';
 
 function App() {
-  let [mode, setMode] = useState('light');
+  let [mode, setMode] = useState({
+    bg: 'light',
+    text: 'black'
+  });
 
   const toggleMode = ()=> {
     console.log("Mode Toggled");
 
-    if(mode === 'light')
+    if(mode.bg === 'light')
     {
-      setMode('dark');
+      setMode({
+        bg:'dark',
+        text: 'white'
+      });
+      document.body.style.color = 'white';
+      document.body.style.backgroundColor = 'rgba(var(--bs-dark-rgb),var(--bs-bg-opacity)) !important';
     }
     else{
-      setMode('light');
+      setMode({
+        bg: 'light',
+        text: 'black'});
+        document.body.style.color = 'black';
     }
+    console.log(mode.bg);
   }
   return (
    <>
-   <Navbar title= "Text Inspecto"  mode={mode} /> 
+   <Navbar  mode={mode.bg} text={mode.text} toggleMode={toggleMode} /> 
    <TextForm/>
    <About/>
    </>
