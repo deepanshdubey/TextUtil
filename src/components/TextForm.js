@@ -88,6 +88,7 @@ export default function TextForm() {
         <h2>Preview</h2>
         <div className="preview">{text} </div>
       </div>
+      
     </>
   );
 }

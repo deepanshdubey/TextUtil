@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
+import { Link } from "react-router-dom";
 
 function myNavbar(props) {
  
@@ -15,14 +16,15 @@ function myNavbar(props) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto" >
-            <Nav.Link href="#home" >TextUtil</Nav.Link>
-            <Nav.Link href="#link" >About Us</Nav.Link>
+            <Nav.Link href="/" >TextUtil</Nav.Link>
+            <Nav.Link href="/src/components/About.js" >About Us</Nav.Link>
 
             <Form>
               <Form.Check type="switch" onClick={props.toggleMode} id="custom-switch" label="Dark Mode" />
             </Form>
           </Nav>
         </Navbar.Collapse>
+        <
       </Container>
     </Navbar>
   );
